@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Playwright 测试报告</title>
+  <style>
+    body { font-family: 'Microsoft YaHei', sans-serif; margin: 24px; color: #222; }
+    h1 { margin-bottom: 12px; }
+    h2 { margin-top: 28px; }
+    .meta { margin-bottom: 20px; line-height: 1.8; }
+    .cards { display: flex; gap: 12px; margin: 16px 0 24px; flex-wrap: wrap; }
+    .card { min-width: 150px; padding: 14px 16px; border-radius: 10px; background: #f7f7f8; border: 1px solid #e5e7eb; }
+    .card .label { font-size: 13px; color: #666; margin-bottom: 6px; }
+    .card .value { font-size: 28px; font-weight: 700; }
+    .chart-wrap { display: flex; align-items: flex-end; gap: 24px; height: 300px; padding: 24px; border: 1px solid #e5e7eb; border-radius: 12px; background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%); }
+    .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 120px; height: 100%; }
+    .bar-value { font-size: 14px; margin-bottom: 8px; font-weight: 700; }
+    .bar { width: 72px; border-radius: 10px 10px 0 0; min-height: 8px; }
+    .bar.passed { background: #1a7f37; }
+    .bar.failed { background: #cf222e; }
+    .bar.ignored { background: #9a6700; }
+    .bar-label { margin-top: 10px; font-size: 14px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    th, td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+    th { background: #f5f5f5; text-align: left; }
+    td.passed { color: #1a7f37; font-weight: 700; }
+    td.failed { color: #cf222e; font-weight: 700; }
+    td.skipped { color: #9a6700; font-weight: 700; }
+    pre { white-space: pre-wrap; margin: 0; font-family: Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Playwright 测试报告</h1>
+  <div class="meta">
+    <div>开始时间：2026-03-27 17:13:06</div>
+    <div>结束时间：2026-03-27 17:16:53</div>
+    <div>总耗时：227.46s</div>
+    <div>总用例数：22</div>
+    <div>通过数：22</div>
+    <div>失败数：0</div>
+    <div>忽略数：0</div>
+  </div>
+
+  <h2>分类统计</h2>
+  <div class="cards">
+    <div class="card"><div class="label">总用例数</div><div class="value">22</div></div>
+    <div class="card"><div class="label">通过数</div><div class="value">22</div></div>
+    <div class="card"><div class="label">失败数</div><div class="value">0</div></div>
+    <div class="card"><div class="label">忽略数</div><div class="value">0</div></div>
+  </div>
+  <div class="chart-wrap">
+    <div class="bar-col">
+      <div class="bar-value">22</div>
+      <div class="bar passed" style="height: 220px;"></div>
+      <div class="bar-label">通过</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar-value">0</div>
+      <div class="bar failed" style="height: 0px;"></div>
+      <div class="bar-label">失败</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar-value">0</div>
+      <div class="bar ignored" style="height: 0px;"></div>
+      <div class="bar-label">忽略</div>
+    </div>
+  </div>
+
+  <h2>用例明细</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>用例</th>
+        <th>结果</th>
+        <th>耗时</th>
+        <th>失败信息</th>
+        <th>截图</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>test_01_page_elements_are_visible[chromium]</td><td class="passed">passed</td><td>0.23s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_02_phone_accepts_valid_value[chromium]</td><td class="passed">passed</td><td>0.51s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_03_empty_phone_cannot_get_code[chromium]</td><td class="passed">passed</td><td>0.03s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_04_short_phone_cannot_get_code[chromium]</td><td class="passed">passed</td><td>0.53s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_05_phone_length_limit[chromium]</td><td class="passed">passed</td><td>0.55s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_06_invalid_phone_format[chromium]</td><td class="passed">passed</td><td>0.55s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_07_get_code_success[chromium]</td><td class="passed">passed</td><td>41.55s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_08_get_code_countdown[chromium]</td><td class="passed">passed</td><td>42.09s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_09_repeat_get_code_is_prevented[chromium]</td><td class="passed">passed</td><td>21.39s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_10_code_accepts_valid_value[chromium]</td><td class="passed">passed</td><td>0.49s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_11_empty_code_cannot_login[chromium]</td><td class="passed">passed</td><td>0.07s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_12_invalid_code_login_fails[chromium]</td><td class="passed">passed</td><td>0.75s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_14_login_success[chromium]</td><td class="passed">passed</td><td>22.84s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_15_login_without_requesting_code_shows_error[chromium]</td><td class="passed">passed</td><td>2.96s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_16_login_button_state_changes[chromium]</td><td class="passed">passed</td><td>0.54s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_17_logged_in_user_revisit_login_redirects[chromium]</td><td class="passed">passed</td><td>1.03s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_18_code_only_valid_for_original_phone[chromium]</td><td class="passed">passed</td><td>0.77s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_21_phone_trims_spaces[chromium]</td><td class="passed">passed</td><td>0.47s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_22_code_rejects_non_digit[chromium]</td><td class="passed">passed</td><td>0.60s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_23_login_repeat_submit_is_prevented[chromium]</td><td class="passed">passed</td><td>1.86s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_24_refresh_keeps_login_state[chromium]</td><td class="passed">passed</td><td>1.04s</td><td><pre>-</pre></td><td>-</td></tr><tr><td>test_25_back_navigation_after_login[chromium]</td><td class="passed">passed</td><td>0.84s</td><td><pre>-</pre></td><td>-</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
